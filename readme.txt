@@ -1,3 +1,3 @@
-QQ±íÇé²å¼ş
-1. »ùÓÚjquery1.7.2ÒÔÉÏ°æ±¾¿ª·¢£¬jquery¹«¹²¿â http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js
-2. ÊäÈë¿ò(Ê¹ÓÃdiv£¬Ã»ÓĞÊ¹ÓÃtextarea)°ó¶¨idÎª OP_comment£¬±íÇéµã»÷°´Å¥°ó¶¨idÎªOP_phiz¼´¿É£¬Ê¹ÓÃ·½·¨¿É²ÎÕÕdemo.html
+QQè¡¨æƒ…æ’ä»¶
+1. åŸºäºjquery1.7.2ä»¥ä¸Šç‰ˆæœ¬å¼€å‘ï¼Œjqueryå…¬å…±åº“ http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.jsï¼›
+2. è¾“å…¥æ¡†(ä½¿ç”¨divï¼Œæ²¡æœ‰ä½¿ç”¨textarea)ç»‘å®šidä¸º OP_commentï¼Œè¡¨æƒ…ç‚¹å‡»æŒ‰é’®ç»‘å®šidä¸ºOP_phizå³å¯ï¼Œä½¿ç”¨æ–¹æ³•å¯å‚ç…§demo.htmlã€‚
