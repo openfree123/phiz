@@ -7,8 +7,8 @@
  */
  var imgUrl = './images/minblog/';
  var imgExt = '.gif';
- //表情名称语言，chinese or English
- var imgNameFormat = 'chinese';
+ //表情名称语言，Chinese or English
+var imgNameFormat = 'Chinese';
  //图片的中英文对照表
  var imgNames = {
 	aoman    : '傲慢',
@@ -201,10 +201,8 @@ html.push('<area shape="rect" coords="225,128,253,159" href="###" title="糗大�
 html.push('<area shape="rect" coords="253,128,281,159" href="###" title="球" name="qiu">');
 html.push('<area shape="rect" coords="282,129,308,159" href="###" title="拳头" name="quantou"><area shape="rect" coords="311,130,336,157" href="###" title="弱" name="ruo"><area shape="rect" coords="338,129,365,158" href="###" title="色" name="se"><area shape="rect" coords="366,129,392,158" href="###" title="闪电" name="shandian"><area shape="rect" coords="391,127,419,158" href="###" title="胜利" name="shengli"><area shape="rect" coords="1,161,29,189" href="###" title="神马" name="shenma"><area shape="rect" coords="30,162,54,189" href="###" title="帅" name="shuai"><area shape="rect" coords="58,162,83,189" href="###" title="睡觉" name="shuijiao"><area shape="rect" coords="86,162,111,190" href="###" title="太阳" name="taiyang"><area shape="rect" coords="113,162,138,189" href="###" title="跳" name="tiao"><area shape="rect" coords="140,162,169,190" href="###" title="调皮" name="tiaopi"><area shape="rect" coords="170,162,196,190" href="###" title="跳绳" name="tiaosheng"><area shape="rect" coords="196,163,224,191" href="###" title="跳舞" name="tiaowu"><area shape="rect" coords="226,161,253,189" href="###" title="偷笑" name="touxiao"><area shape="rect" coords="253,161,279,190" href="###" title="吐" name="tu"><area shape="rect" coords="282,162,308,190" href="###" title="兔子" name="tuzi"><area shape="rect" coords="310,161,336,188" href="###" title="挖鼻" name="wabi"><area shape="rect" coords="338,161,366,189" href="###" title="委屈" name="weiqu"><area shape="rect" coords="366,161,392,190" href="###" title="闭嘴" name="weixiao"><area shape="rect" coords="392,160,420,190" href="###" title="问" name="wen"><area shape="rect" coords="1,192,29,221" href="###" title="握手" name="woshou"><area shape="rect" coords="29,194,58,221" href="###" title="吓" name="xia"><area shape="rect" coords="56,193,83,221" href="###" title="先问" name="xianwen"><area shape="rect" coords="84,192,113,221" href="###" title="西瓜" name="xigua"><area shape="rect" coords="113,191,140,220" href="###" title="心碎" name="xinsui"><area shape="rect" coords="141,189,169,220" href="###" title="嘘" name="xu"><area shape="rect" coords="170,192,196,221" href="###" title="阴险" name="yinxian"><area shape="rect" coords="198,192,224,220" href="###" title="拥抱" name="yongbao"><area shape="rect" coords="226,191,251,220" href="###" title="右哼哼" name="youhengheng"><area shape="rect" coords="252,194,275,219" href="###" title="右太极" name="youtaiji"><area shape="rect" coords="280,192,308,222" href="###" title="月亮" name="yueliang"><area shape="rect" coords="309,191,337,221" href="###" title="晕" name="yun"><area shape="rect" coords="336,192,364,223" href="###" title="再见" name="zaijian"><area shape="rect" coords="365,192,393,222" href="###" title="炸弹" name="zhadan"><area shape="rect" coords="392,192,419,222" href="###" title="折磨" name="zhemo"><area shape="rect" coords="1,225,28,257" href="###" title="抓狂" name="zhuakuang"><area shape="rect" coords="31,225,59,257" href="###" title="转圈" name="zhuanquan"><area shape="rect" coords="59,227,82,255" href="###" title="猪头" name="zhutou"><area shape="rect" coords="84,225,111,254" href="###" title="左哼哼" name="zuohengheng"><area shape="rect" coords="113,225,141,254" href="###" title="左太极" name="zuotaiji"><area shape="rect" coords="140,225,168,254" href="###" title="足球" name="zuqiu"></map></div>');
 $(function() {
-	// var OP_phiz = document.getElementById('OP_phiz');
 	var dialog = function() {
-		// OP_phiz.innerHTML = html.join('');
-		if($('#bigblog').length == 0) {
+		if($('#bigblog').length === 0) {
 			$('#OP_phiz').after(html.join('')); 
 		}
 	}
@@ -219,7 +217,12 @@ $(function() {
 	);
 	$('map area').live({
 		click: function() {
-			var imgName = '['+$(this).attr('name')+']';
+			if(imgNameFormat === 'Chinese') {
+				var imgName = '['+$(this).attr('title')+']';
+			}
+			if(imgNameFormat === 'English') {
+				var imgName = '['+$(this).attr('name')+']';
+			}
 			var text = $('#OP_comment').html();
 			text += imgName;
 			$('#OP_comment').html(text);
